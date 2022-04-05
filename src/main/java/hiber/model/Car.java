@@ -15,9 +15,8 @@ public class Car {
     @Column(name = "series")
     private int series;
 
-    @OneToOne
-    @JoinColumn(name = "users_id")
-    private User user;
+    @OneToOne(mappedBy = "car")
+   private User user;
 
     public Car() {
     }
